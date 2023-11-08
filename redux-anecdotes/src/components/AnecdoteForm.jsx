@@ -13,17 +13,22 @@ const AnecdoteForm = () => {
         setAnecdote('');
     };
     return (
-        <form onSubmit={addAnecdote}>
-            <div>
-                <input
-                    type='text'
-                    name='anecdote'
-                    id='anecdote'
-                    value={anecdote}
-                    onChange={({ target }) => setAnecdote(target.value)}
-                />
-            </div>
-            <button type='submit'>create</button>
+        <form
+            onSubmit={addAnecdote}
+            style={{ width: 'max-content', marginBlockStart: '0.5rem' }}>
+            <fieldset>
+                <legend>Create New</legend>
+                <div>
+                    <input
+                        type='text'
+                        name='anecdote'
+                        id='anecdote'
+                        value={anecdote}
+                        onChange={({ target }) => setAnecdote(target.value)}
+                    />
+                </div>
+                <button type='submit'>create</button>
+            </fieldset>
         </form>
     );
 };
