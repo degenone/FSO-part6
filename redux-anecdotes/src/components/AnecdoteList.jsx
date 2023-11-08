@@ -12,9 +12,10 @@ const orderByDesc = (a, b) => {
 
 const AnecdoteList = () => {
     const anecdotes = useSelector((state) => {
-        if (state.filter) {
+        const filter = state.filter.trim();
+        if (filter) {
             return state.anecdotes
-                .filter((a) => a.content.includes(state.filter))
+                .filter((a) => a.content.includes(filter))
                 .sort(orderByDesc);
         }
         return state.anecdotes.sort(orderByDesc);
