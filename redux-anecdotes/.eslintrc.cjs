@@ -12,9 +12,43 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    indent: [
+      'error',
+      4,
+      { 'SwitchCase':  1 }
+    ],
+    'linebreak-style': [
+      'error',
+      'unix'
+    ],
+    quotes: [
+      'error',
+      'single'
+    ],
+    semi: [
+      'error',
+      'always'
+    ],
+    eqeqeq: 'error',
+    'no-trailing-spaces': 'error',
+    'object-curly-spacing': [
+      'error',
+      'always'
+    ],
+    'arrow-spacing': [
+      'error',
+      { before: true, after: true }
+    ],
+    'eol-last': [
+      'error',
+      'always'
+    ],
+    'no-console': 0,
+    'react/react-in-jsx-scope': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
+    'react/prop-types': 0
   },
 }
