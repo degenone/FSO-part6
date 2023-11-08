@@ -18,7 +18,8 @@ const AnecdoteList = () => {
                 .filter((a) => a.content.includes(filter))
                 .sort(orderByDesc);
         }
-        return state.anecdotes.sort(orderByDesc);
+        const filtered = [...state.anecdotes];
+        return filtered.sort(orderByDesc);
     });
     const dispatch = useDispatch();
     return (
