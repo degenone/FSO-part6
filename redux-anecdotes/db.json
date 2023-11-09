@@ -32,13 +32,18 @@
     },
     {
       "content": "new anecdote in db.json",
-      "votes": 0,
+      "votes": 1,
       "id": "xH_ifXW"
     },
     {
       "content": "new redux thunk anecdote",
       "votes": 1,
       "id": "5XLD-Fe"
+    },
+    {
+      "content": "new notification anecdote",
+      "votes": 0,
+      "id": "0CS1hsn"
     }
   ]
 }
