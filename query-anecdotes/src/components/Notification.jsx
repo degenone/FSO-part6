@@ -1,4 +1,7 @@
+import { useNotificationState } from './NotificationContext';
+
 const Notification = () => {
+    const message = useNotificationState();
     const style = {
         border: 'solid',
         padding: 10,
@@ -6,9 +9,9 @@ const Notification = () => {
         marginBottom: 5,
     };
 
-    if (true) return null;
+    if (message === null) return;
 
-    return <div style={style}></div>;
+    return <div style={style}>{message}</div>;
 };
 
 export default Notification;
