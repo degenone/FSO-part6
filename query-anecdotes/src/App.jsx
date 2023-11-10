@@ -25,7 +25,9 @@ const App = () => {
                     Anecdote service not available due to problems in the
                     server.
                 </p>
-                <p>Error: <code>{error.message}</code></p>
+                <p>
+                    Error: <code>{error.message}</code>
+                </p>
             </div>
         );
     }

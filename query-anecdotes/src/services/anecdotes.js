@@ -7,4 +7,12 @@ const getAll = async () => {
     return res.data;
 };
 
-export default { getAll };
+const create = async (content) => {
+    const res = await axios.post(URL, {
+        content,
+        votes: 0,
+    });
+    return res.data;
+};
+
+export default { getAll, create };
