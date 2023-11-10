@@ -11,6 +11,13 @@ const AnecdoteForm = () => {
             const anecdotes = client.getQueryData(['anecdotes']);
             client.setQueryData(['anecdotes'], [...anecdotes, newAnecdote]);
         },
+        onError: () => {
+            notificationDispatch({
+                type: 'SET',
+                payload: 'Anecdote must be at least 5 characters long.',
+            });
+            setTimeout(() => notificationDispatch({ type: 'RESET' }), 5000);
+        },
     });
 
     const onCreate = async (event) => {
